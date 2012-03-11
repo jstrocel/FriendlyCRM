@@ -1,0 +1,23 @@
+Home Page
+
+<% if user_signed_in? %>
+
+<%if !@events.empty?%>
+ 
+ <%=render 'event'%>
+<%end%>
+
+<%if !@tasks.empty?%>
+ 
+ <%=render 'task'%>
+<%end%>
+
+
+<%if @events.empty? and @tasks.empty?%>
+<%=render 'todo'%>
+<%end%>
+<%else%>
+<%=render 'initial'%>
+<%end%>
+
+

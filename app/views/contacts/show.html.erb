@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Firstname:</b>
+  <%= @contact.firstname %>
+</p>
+
+<p>
+  <b>Lastname:</b>
+  <%= @contact.lastname %>
+</p>
+
+<p>
+  <b>Number:</b>
+  <%= @contact.number %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @contact.email %>
+</p>
+
+<div class="dialog">
+ <p> Did you meet anyone else?</p>
+
+ <%=link_to "Yes", new_contact_path %></br>
+ 
+ <%=link_to "No", eventreview_path %></br>
+
+</div>
+
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Back', contacts_path %>

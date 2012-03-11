@@ -1,0 +1,36 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+
+#face1_hype_container
+{position:relative;overflow:hidden;width:600px;height:400px;}
+
+#wrap{
+	width:1000px;
+	margin:0 auto;
+	background:#fff;
+}
+#textspace{
+	position:relative;
+	overflow:hidden;
+	float:right;
+	width:400px;
+	height:400px;
+}
+
+.dialog{
+	font-size:25px;
+	color:#0d7a28;
+	line-height:28px;
+}
+
+.dialog p{
+	font-size:25px;
+	line-height:28px;
+	
+	
+}

@@ -1,0 +1,13 @@
+
+
+<div class="dialog">
+<p>My records indicate you had some appointments. Which one do you want to go over?</p>
+
+
+
+<% @events.each do |event| %>
+<li><%=link_to event.name, eventreview_path%></li>
+<%end%>
+<%=link_to "I don't want to review today", root_path %></br>
+
+</div>

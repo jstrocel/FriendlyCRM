@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  fromtime: 2012-03-10 11:18:40
+  totime: 2012-03-10 11:18:40
+
+two:
+  name: MyString
+  fromtime: 2012-03-10 11:18:40
+  totime: 2012-03-10 11:18:40
