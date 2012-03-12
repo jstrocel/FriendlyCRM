@@ -7,14 +7,14 @@ class PagesController < ApplicationController
          @tasks  = current_user.tasks.find(:all, :conditions => ["deadline < ?", Time.now])
      @events = current_user.events.find(:all, :conditions => [ "review != ? and totime < ?", true, Time.now])
    end
-      debugger
+      #debugger
     
   end
   
   def eventreview
     
    @events = current_user.events.find(:all, :conditions => ["review != ? and totime < ?", true, Time.now])
-   debugger
+   #debugger
    
   end
   

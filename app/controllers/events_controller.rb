@@ -57,7 +57,7 @@ class EventsController < ApplicationController
   # PUT /events/1
   # PUT /events/1.json
   def update
-    debugger
+    #debugger
     @event = current_user.events.find(params[:id])
 
     respond_to do |format|
