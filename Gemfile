@@ -5,7 +5,6 @@ gem 'rails', '3.1.1'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 
 gem 'devise'
 
@@ -20,7 +19,8 @@ group :assets do
 end
 
 group :development do
- #gem 'ruby-debug19'
+gem 'sqlite3'
+ gem 'ruby-debug19'
 end
 
 gem 'jquery-rails'
