@@ -20,7 +20,7 @@ group :assets do
 end
 
 group :development do
- gem 'ruby-debug19'
+ #gem 'ruby-debug19'
 end
 
 gem 'jquery-rails'
