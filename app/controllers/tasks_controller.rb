@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = current_user.Task.all
+    @tasks = current_user.tasks.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class TasksController < ApplicationController
   # GET /tasks/1
   # GET /tasks/1.json
   def show
-    @task = current_user.Task.find(params[:id])
+    @task = current_user.tasks.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class TasksController < ApplicationController
   # GET /tasks/new
   # GET /tasks/new.json
   def new
-    @task = current_user.Task.new
+    @task = current_user.tasks.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +34,13 @@ class TasksController < ApplicationController
 
   # GET /tasks/1/edit
   def edit
-    @task = current_user.Task.find(params[:id])
+    @task = current_user.tasks.find(params[:id])
   end
 
   # POST /tasks
   # POST /tasks.json
   def create
-    @task = current_user.Task.new(params[:task])
+    @task = current_user.tasks.new(params[:task])
 
     respond_to do |format|
       if @task.save
@@ -56,7 +56,7 @@ class TasksController < ApplicationController
   # PUT /tasks/1
   # PUT /tasks/1.json
   def update
-    @task = current_user.Task.find(params[:id])
+    @task = current_user.tasks.find(params[:id])
 
     respond_to do |format|
       if @task.update_attributes(params[:task])
@@ -72,7 +72,7 @@ class TasksController < ApplicationController
   # DELETE /tasks/1
   # DELETE /tasks/1.json
   def destroy
-    @task = current_user.Task.find(params[:id])
+    @task = current_user.tasks.find(params[:id])
     @task.destroy
 
     respond_to do |format|
