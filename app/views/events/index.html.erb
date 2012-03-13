@@ -1,26 +1,19 @@
-<h1>Listing events</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Fromtime</th>
-    <th>Totime</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @events.each do |event| %>
-  <tr>
-    <td><%= event.name %></td>
-    <td><%= event.fromtime %></td>
-    <td><%= event.totime %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div class= "dialog">
+ These are all the appointments you have made
+</div>
+<div id="accordion">
+  
+  <% @events.each do |event| %>
+   <h3><a href="#"><%= event.name %></a></h3>
+   <div>
+   		<p>
+   		  From:<%= event.fromtime.strftime("%B %d at %I:%M %p") %> To <%= event.totime.strftime("%B %d at %I:%M %p") %>
+   		</p>
+   	</div>	  
+  <% end %>
+</div>
 
 <br />
 

@@ -2,7 +2,7 @@
 <%if !@events.empty?%>
 <div class="dialog">
  <p>So, you attended <%=@events.first.name%> <%=time_ago_in_words(@events.first.fromtime)%> ago. Did you meet anyone there?</p>
-
+</div>
 
  <%=link_to "Yes", new_contact_path %></br>
  
@@ -11,6 +11,7 @@
 <%else%>
  <div class="dialog">
   <p>It looks like we've reviewed your events!'</p>
-  <%=link_to "Hooray!", root_path%>
   </div>
+  <%=link_to "Hooray!", root_path%>
+  
 <%end%>

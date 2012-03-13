@@ -7,10 +7,11 @@
 */
 
 #face1_hype_container
-{position:relative;overflow:hidden;width:600px;height:400px;}
+{float:left;position:relative;overflow:hidden;width:600px;height:400px;}
 
 #wrap{
 	width:1000px;
+	height:400px;
 	margin:0 auto;
 	background:#fff;
 }
@@ -33,4 +34,7 @@
 	line-height:28px;
 	
 	
+}
+footer{
+clear:both;
 }

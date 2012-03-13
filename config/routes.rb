@@ -9,6 +9,9 @@ Friendlycrm::Application.routes.draw do
 
   root :to => "pages#home"
   match 'eventreview' =>'pages#eventreview'
+  devise_for :users do
+    get 'logout' => 'devise/sessions#destroy'
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

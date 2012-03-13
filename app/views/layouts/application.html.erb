@@ -2,21 +2,35 @@
 <html>
 <head>
   <title>Friendlycrm</title>
+  
   <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag 'jquery.min', 'jquery-ui-1.8.18.custom.min', 'dialog'%>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="wrap">
+<div id="wrap">
   <div id="face1_hype_container" style="display:inline;position:relative;overflow:hidden;width:600px;height:400px;">
   	<script type="text/javascript" charset="utf-8" src="/assets/face1_hype_generated_script.js"></script>
   </div>
 
   <div id="textspace">
 <%= yield %>
+<div id="footer">
+  <% if user_signed_in? %>
+    <li>
+    <%= link_to('Logout', logout_path) %>        
+    </li>
+  <% else %>
+    <li>
+    <%= link_to('Login', new_user_session_path)  %>  
+    </li>
+  <% end %>
+</div>
   </div>
+  
 </div>
 
-
 </body>
+
 </html>
